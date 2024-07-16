@@ -1,0 +1,13 @@
+{
+  "name": "regex-ts-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "watch": "tsc --watch",
+    "clean": "shx rm -rf ./dist/*"
+  },
+  "dependencies": {
+    "regex": "file:../regex"
+  }
+}

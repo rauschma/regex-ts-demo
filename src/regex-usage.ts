@@ -1,8 +1,6 @@
-// Does `regex-types.d.ts` work?
-
 import { partial, regex } from 'regex';
 
-const re = regex('m')`
+regex('m')`
   # Only the inner regex is case insensitive (flag i)
   # Also, the outer regex's flag m is not applied to it
   ${/^a.b$/i}
@@ -13,3 +11,7 @@ const re = regex('m')`
   # This string is contextually sandboxed but not escaped
   ${partial('^ a.b $')}
 `;
+
+regex.bind(RegExp)`abc`;
+
+regex`abc`;
